@@ -6,6 +6,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.breadcrumbPage
 import io.github._4kleiber.bootstrap.gallery.pages.buttonGroupPage
 import io.github._4kleiber.bootstrap.gallery.pages.buttonPage
 import io.github._4kleiber.bootstrap.gallery.pages.cardPage
+import io.github._4kleiber.bootstrap.gallery.pages.carouselPage
 import io.github._4kleiber.bootstrap.gallery.pages.closeButtonPage
 import io.github._4kleiber.bootstrap.gallery.pages.collapsePage
 import io.github._4kleiber.bootstrap.gallery.pages.dropdownPage
@@ -62,6 +63,7 @@ private fun Application.galleryModule() {
         get("/components/toast") { call.respondHtml { toastPage() } }
         get("/components/tooltip") { call.respondHtml { tooltipPage() } }
         get("/components/popover") { call.respondHtml { popoverPage() } }
+        get("/components/carousel") { call.respondHtml { carouselPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
