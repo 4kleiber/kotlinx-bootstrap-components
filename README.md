@@ -118,9 +118,15 @@ grouped by how much they depend on Bootstrap's JS bundle to actually work once r
   Toasts): this library emits correct `data-bs-*`/ARIA markup, but nothing will open, close, or
   toggle until the page also loads `bootstrap.bundle.js`.
 - **Heaviest JS dependency** (Tooltips, Popovers, Carousel, Scrollspy): the consumer must also
-  write client-side initialization JS beyond data attributes for these to do anything.
+  write client-side initialization JS beyond data attributes for these to do anything. Within
+  this tier, Tooltips and Popovers *always* need an explicit `new bootstrap.Tooltip(el)` /
+  `new bootstrap.Popover(el)` call per trigger element — Bootstrap's JS never reads
+  `data-bs-toggle="tooltip"`/`"popover"` on its own. Carousel and Scrollspy, by contrast, fully
+  auto-initialize from `data-bs-ride="carousel"` / `data-bs-spy="scroll"` alone, same as the tier
+  above — no consumer JS required for those two.
 
-The gallery itself loads Bootstrap's CSS+JS bundle from a CDN for exactly this reason.
+The gallery itself loads Bootstrap's CSS+JS bundle from a CDN for exactly this reason (and its
+Tooltip/Popover pages additionally include the small init script those two specifically require).
 
 ## Contributing
 
