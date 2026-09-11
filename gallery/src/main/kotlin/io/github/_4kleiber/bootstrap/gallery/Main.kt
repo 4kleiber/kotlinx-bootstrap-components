@@ -8,6 +8,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.buttonPage
 import io.github._4kleiber.bootstrap.gallery.pages.cardPage
 import io.github._4kleiber.bootstrap.gallery.pages.closeButtonPage
 import io.github._4kleiber.bootstrap.gallery.pages.collapsePage
+import io.github._4kleiber.bootstrap.gallery.pages.dropdownPage
 import io.github._4kleiber.bootstrap.gallery.pages.gridPage
 import io.github._4kleiber.bootstrap.gallery.pages.indexPage
 import io.github._4kleiber.bootstrap.gallery.pages.listGroupPage
@@ -44,6 +45,7 @@ private fun Application.galleryModule() {
         get("/components/spinner") { call.respondHtml { spinnerPage() } }
         get("/components/placeholder") { call.respondHtml { placeholderPage() } }
         get("/components/collapse") { call.respondHtml { collapsePage() } }
+        get("/components/dropdown") { call.respondHtml { dropdownPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
