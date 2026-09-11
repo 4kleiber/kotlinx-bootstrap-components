@@ -81,11 +81,15 @@ internal fun HTML.popoverPage() {
         }
 
         script {
+            // See TooltipPage.kt's identical comment: deferred until DOMContentLoaded so the
+            // CDN bootstrap bundle (loaded later in the document) is guaranteed to be defined.
             unsafe {
                 +"""
-                document.querySelectorAll('[data-bs-toggle="popover"]').forEach(
-                  (el) => new bootstrap.Popover(el)
-                )
+                document.addEventListener('DOMContentLoaded', () => {
+                  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(
+                    (el) => new bootstrap.Popover(el)
+                  )
+                })
                 """.trimIndent()
             }
         }

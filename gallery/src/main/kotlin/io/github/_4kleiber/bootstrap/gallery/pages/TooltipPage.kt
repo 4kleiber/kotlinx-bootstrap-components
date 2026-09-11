@@ -70,11 +70,17 @@ internal fun HTML.tooltipPage() {
         }
 
         script {
+            // Deferred until DOMContentLoaded: this script tag is placed inside <main>, before
+            // the CDN <script src="bootstrap.bundle.min.js"> Layout.kt appends at the very end of
+            // <body> — by the time DOMContentLoaded fires, every synchronous script (that one
+            // included) has already run, so `bootstrap` is guaranteed to be defined here.
             unsafe {
                 +"""
-                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(
-                  (el) => new bootstrap.Tooltip(el)
-                )
+                document.addEventListener('DOMContentLoaded', () => {
+                  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(
+                    (el) => new bootstrap.Tooltip(el)
+                  )
+                })
                 """.trimIndent()
             }
         }
