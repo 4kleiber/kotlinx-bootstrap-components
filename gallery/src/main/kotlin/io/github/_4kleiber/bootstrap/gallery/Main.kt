@@ -22,6 +22,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.progressPage
 import io.github._4kleiber.bootstrap.gallery.pages.spinnerPage
 import io.github._4kleiber.bootstrap.gallery.pages.tabPage
 import io.github._4kleiber.bootstrap.gallery.pages.toastPage
+import io.github._4kleiber.bootstrap.gallery.pages.tooltipPage
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.html.respondHtml
@@ -58,6 +59,7 @@ private fun Application.galleryModule() {
         get("/components/modal") { call.respondHtml { modalPage() } }
         get("/components/offcanvas") { call.respondHtml { offcanvasPage() } }
         get("/components/toast") { call.respondHtml { toastPage() } }
+        get("/components/tooltip") { call.respondHtml { tooltipPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
