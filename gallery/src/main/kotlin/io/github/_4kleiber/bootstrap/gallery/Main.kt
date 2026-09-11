@@ -13,6 +13,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.gridPage
 import io.github._4kleiber.bootstrap.gallery.pages.indexPage
 import io.github._4kleiber.bootstrap.gallery.pages.listGroupPage
 import io.github._4kleiber.bootstrap.gallery.pages.navPage
+import io.github._4kleiber.bootstrap.gallery.pages.navbarPage
 import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
@@ -50,6 +51,7 @@ private fun Application.galleryModule() {
         get("/components/dropdown") { call.respondHtml { dropdownPage() } }
         get("/components/nav") { call.respondHtml { navPage() } }
         get("/components/tab") { call.respondHtml { tabPage() } }
+        get("/components/navbar") { call.respondHtml { navbarPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
