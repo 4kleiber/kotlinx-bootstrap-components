@@ -17,6 +17,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
 import io.github._4kleiber.bootstrap.gallery.pages.spinnerPage
+import io.github._4kleiber.bootstrap.gallery.pages.tabPage
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.html.respondHtml
@@ -48,6 +49,7 @@ private fun Application.galleryModule() {
         get("/components/collapse") { call.respondHtml { collapsePage() } }
         get("/components/dropdown") { call.respondHtml { dropdownPage() } }
         get("/components/nav") { call.respondHtml { navPage() } }
+        get("/components/tab") { call.respondHtml { tabPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
