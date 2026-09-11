@@ -15,6 +15,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.listGroupPage
 import io.github._4kleiber.bootstrap.gallery.pages.modalPage
 import io.github._4kleiber.bootstrap.gallery.pages.navPage
 import io.github._4kleiber.bootstrap.gallery.pages.navbarPage
+import io.github._4kleiber.bootstrap.gallery.pages.offcanvasPage
 import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
@@ -54,6 +55,7 @@ private fun Application.galleryModule() {
         get("/components/tab") { call.respondHtml { tabPage() } }
         get("/components/navbar") { call.respondHtml { navbarPage() } }
         get("/components/modal") { call.respondHtml { modalPage() } }
+        get("/components/offcanvas") { call.respondHtml { offcanvasPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
