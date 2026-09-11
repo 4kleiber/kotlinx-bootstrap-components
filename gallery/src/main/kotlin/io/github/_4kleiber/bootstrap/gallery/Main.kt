@@ -21,6 +21,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
 import io.github._4kleiber.bootstrap.gallery.pages.popoverPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
+import io.github._4kleiber.bootstrap.gallery.pages.scrollspyPage
 import io.github._4kleiber.bootstrap.gallery.pages.spinnerPage
 import io.github._4kleiber.bootstrap.gallery.pages.tabPage
 import io.github._4kleiber.bootstrap.gallery.pages.toastPage
@@ -64,6 +65,7 @@ private fun Application.galleryModule() {
         get("/components/tooltip") { call.respondHtml { tooltipPage() } }
         get("/components/popover") { call.respondHtml { popoverPage() } }
         get("/components/carousel") { call.respondHtml { carouselPage() } }
+        get("/components/scrollspy") { call.respondHtml { scrollspyPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
