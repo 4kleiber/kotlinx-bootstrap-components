@@ -17,6 +17,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.navPage
 import io.github._4kleiber.bootstrap.gallery.pages.navbarPage
 import io.github._4kleiber.bootstrap.gallery.pages.offcanvasPage
 import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
+import io.github._4kleiber.bootstrap.gallery.pages.popoverPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
 import io.github._4kleiber.bootstrap.gallery.pages.spinnerPage
@@ -60,6 +61,7 @@ private fun Application.galleryModule() {
         get("/components/offcanvas") { call.respondHtml { offcanvasPage() } }
         get("/components/toast") { call.respondHtml { toastPage() } }
         get("/components/tooltip") { call.respondHtml { tooltipPage() } }
+        get("/components/popover") { call.respondHtml { popoverPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
