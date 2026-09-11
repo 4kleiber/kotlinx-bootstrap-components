@@ -23,9 +23,11 @@ import kotlinx.html.title
 internal data class ComponentLink(val path: String, val label: String)
 
 /**
- * Every page the gallery serves, grouped exactly like section 4 of the
- * project plan (Phase 1 = markup/CSS-only components), mirroring the
- * library's `src/main/kotlin/.../bootstrap` component files 1:1.
+ * Every page the gallery serves, listed in the same order the components were
+ * added across Phase 1 (markup/CSS-only), Phase 2 (markup + `data-bs-*`, needs
+ * Bootstrap's JS bundle loaded) and Phase 3 (heaviest JS dependency — Tooltip/
+ * Popover need explicit client-side init, Carousel/Scrollspy auto-initialize),
+ * mirroring the library's `src/main/kotlin/.../bootstrap` component files 1:1.
  */
 internal val galleryComponents: List<ComponentLink> = listOf(
     ComponentLink("/components/grid", "Grid"),
@@ -49,6 +51,10 @@ internal val galleryComponents: List<ComponentLink> = listOf(
     ComponentLink("/components/modal", "Modal"),
     ComponentLink("/components/offcanvas", "Offcanvas"),
     ComponentLink("/components/toast", "Toasts"),
+    ComponentLink("/components/tooltip", "Tooltips"),
+    ComponentLink("/components/popover", "Popovers"),
+    ComponentLink("/components/carousel", "Carousel"),
+    ComponentLink("/components/scrollspy", "Scrollspy"),
 )
 
 /**

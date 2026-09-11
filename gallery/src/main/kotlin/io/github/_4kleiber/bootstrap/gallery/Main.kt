@@ -6,6 +6,7 @@ import io.github._4kleiber.bootstrap.gallery.pages.breadcrumbPage
 import io.github._4kleiber.bootstrap.gallery.pages.buttonGroupPage
 import io.github._4kleiber.bootstrap.gallery.pages.buttonPage
 import io.github._4kleiber.bootstrap.gallery.pages.cardPage
+import io.github._4kleiber.bootstrap.gallery.pages.carouselPage
 import io.github._4kleiber.bootstrap.gallery.pages.closeButtonPage
 import io.github._4kleiber.bootstrap.gallery.pages.collapsePage
 import io.github._4kleiber.bootstrap.gallery.pages.dropdownPage
@@ -17,11 +18,14 @@ import io.github._4kleiber.bootstrap.gallery.pages.navPage
 import io.github._4kleiber.bootstrap.gallery.pages.navbarPage
 import io.github._4kleiber.bootstrap.gallery.pages.offcanvasPage
 import io.github._4kleiber.bootstrap.gallery.pages.paginationPage
+import io.github._4kleiber.bootstrap.gallery.pages.popoverPage
 import io.github._4kleiber.bootstrap.gallery.pages.placeholderPage
 import io.github._4kleiber.bootstrap.gallery.pages.progressPage
+import io.github._4kleiber.bootstrap.gallery.pages.scrollspyPage
 import io.github._4kleiber.bootstrap.gallery.pages.spinnerPage
 import io.github._4kleiber.bootstrap.gallery.pages.tabPage
 import io.github._4kleiber.bootstrap.gallery.pages.toastPage
+import io.github._4kleiber.bootstrap.gallery.pages.tooltipPage
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.html.respondHtml
@@ -58,6 +62,10 @@ private fun Application.galleryModule() {
         get("/components/modal") { call.respondHtml { modalPage() } }
         get("/components/offcanvas") { call.respondHtml { offcanvasPage() } }
         get("/components/toast") { call.respondHtml { toastPage() } }
+        get("/components/tooltip") { call.respondHtml { tooltipPage() } }
+        get("/components/popover") { call.respondHtml { popoverPage() } }
+        get("/components/carousel") { call.respondHtml { carouselPage() } }
+        get("/components/scrollspy") { call.respondHtml { scrollspyPage() } }
         get("/components") { call.respondRedirect("/") }
     }
 }
