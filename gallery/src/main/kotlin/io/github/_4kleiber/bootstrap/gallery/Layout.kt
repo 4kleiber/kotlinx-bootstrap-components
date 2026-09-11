@@ -41,6 +41,14 @@ internal val galleryComponents: List<ComponentLink> = listOf(
     ComponentLink("/components/progress", "Progress"),
     ComponentLink("/components/spinner", "Spinners"),
     ComponentLink("/components/placeholder", "Placeholders"),
+    ComponentLink("/components/collapse", "Collapse"),
+    ComponentLink("/components/dropdown", "Dropdowns"),
+    ComponentLink("/components/nav", "Navs"),
+    ComponentLink("/components/tab", "Tabs"),
+    ComponentLink("/components/navbar", "Navbar"),
+    ComponentLink("/components/modal", "Modal"),
+    ComponentLink("/components/offcanvas", "Offcanvas"),
+    ComponentLink("/components/toast", "Toasts"),
 )
 
 /**
