@@ -9,9 +9,9 @@ repositories {
 
 dependencies {
     implementation(project(":"))
-    implementation("io.ktor:ktor-server-core:3.5.2")
-    implementation("io.ktor:ktor-server-netty:3.5.2")
-    implementation("io.ktor:ktor-server-html-builder:3.5.2")
+    implementation("io.ktor:ktor-server-core:3.6.0")
+    implementation("io.ktor:ktor-server-netty:3.6.0")
+    implementation("io.ktor:ktor-server-html-builder:3.6.0")
 }
 
 kotlin {
