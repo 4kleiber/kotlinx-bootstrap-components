@@ -133,3 +133,7 @@ Tooltip/Popover pages additionally include the small init script those two speci
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the "add a component" recipe and commit message
 conventions (this project uses [Conventional Commits](https://www.conventionalcommits.org/) —
 `release-please` parses them directly to compute version bumps and changelog entries).
+
+## License
+
+[MIT](LICENSE)
